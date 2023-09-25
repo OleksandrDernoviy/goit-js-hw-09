@@ -47,18 +47,12 @@ function addLeadingZero(value) {
 }  
 
 function onTimer({ days, hours, minutes, seconds }) {
-    // daysEl.textContent = `${days}`;
-    // hoursEl.textContent = `${hours}`;
-    // minutesEl.textContent = `${minutes}`;
-    // secondsEl.textContent = `${seconds}`;
     daysEl.textContent = addLeadingZero(days)
     hoursEl.textContent = addLeadingZero(hours)
     minutesEl.textContent = addLeadingZero(minutes)
     secondsEl.textContent = addLeadingZero(seconds)
-
-    }
-
-
+}
+    
 function convertMs(ms) {
     const second = 1000;
     const minute = second * 60;
