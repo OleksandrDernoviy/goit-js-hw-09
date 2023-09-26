@@ -32,11 +32,16 @@ flatpickr(inputPicker, {
     })
 
 function onStart() {
+    inputPicker.setAttribute('disabled', true)
+    btnstart.setAttribute('disabled', true)
     timerId = setInterval(() => {
     const selectedDate = new Date(inputPicker.value)
     const finalTime = selectedDate - new Date()
+      
         if (finalTime < 1000) {
             clearInterval(timerId)
+            inputPicker.removeAttribute('disabled')
+            btnstart.removeAttribute('disabled')
             }
     const convertTime = convertMs(finalTime)
     onTimer(convertTime)
